@@ -1,0 +1,35 @@
+.about {
+  padding-bottom: 80px;
+  text-align: center;
+  
+  h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0 60px;
+    padding-bottom: 40px;
+    text-align: center;
+    font-size: 32px;
+    &::before,&::after{
+      width: 3px;
+      height: 40px;
+      background-color: $cGreen;
+      content: '';
+    }
+    &::before{
+      margin-right: 30px;
+      transform: rotate(-35deg);
+    }
+    &::after{
+      margin-left: 30px;
+      transform: rotate(35deg);
+    }
+  }
+  h4 {
+    margin-bottom: 40px;
+    font-size: 32px;
+  }
+  .green{
+    font-weight: bold;
+  }
+}

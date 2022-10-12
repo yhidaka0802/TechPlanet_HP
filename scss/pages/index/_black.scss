@@ -1,0 +1,53 @@
+.black{
+  padding: 80px 0;
+  background-color: $cBlack;
+  color: $cWhite;
+  
+  &_content{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    &_text{
+      padding-right: 16px;
+      h3{
+        width: 380px;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 1.2;
+      }
+      p{
+        display: inline-block;
+        margin: 32px 0;
+        padding: 4px 13px;
+        background-color: $cGreen;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      h4 {
+        width: 620px;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 1.2;
+      }
+      .green{
+        font-weight: bold;
+        font-size: 32px;
+      }
+      .red {
+        border-bottom: 1px solid $cRed;
+        color: $cRed;
+        font-weight: bold;
+        font-size: 36px;
+      }
+    }
+
+    &_img{
+      width: 380px;
+      height: 280px;
+      img{
+        height: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+@import "../base/reset";
+@import "../base/base";
+@import "../config";
+@import "../mixin";
+@import "../animation";
+@import "../common";
+@import "../pages/index/top";
+@import "../pages/index/black";
+@import "../pages/index/white";
+@import "../pages/index/counseling";
+@import "../pages/index/about";
+@import "../pages/index/reason";
+@import "../pages/index/curriculum";
+@import "../pages/index/roadmap";
+@import "../pages/index/aftersupport";
+@import "../pages/index/graduate";
+@import "../pages/index/course";
+@import "../pages/index/voice";
+
+// ヘッダー
+.header {
+  &_wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // padding: 0 4%;
+    width: 100%;
+    height: 100px;
+  }
+
+  &_logo{
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 24px;
+    &_img{
+      padding-right: 18px;
+      width: 80px;
+      height: 80px;
+      img{
+        height: 100%;
+      }
+    }
+    h1 {
+      font-size: 28px;
+      line-height: 1;
+    }
+  }
+
+  &_counseling {
+    a{
+      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 220px;
+      height: 100px;
+      background-color: $cGreen_strong;
+      color: $cWhite;
+      text-align: center;
+      font-weight: bold;
+      font-size: 22px;
+    }
+  }  
+}
+
+nav{
+  position: absolute;
+  top: 100px;
+  right: 0;
+  z-index: 3;
+  
+  li a{
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: calc((100vh - 100px) / 5);
+    background-color: $cWhite;
+    color: $cGreen;
+    font-size: 20px;
+    &:hover{
+      background-color: $cGreen;
+      color: $cWhite;
+    }
+  }
+
+  .login{
+    background-color: $cGreen;
+    color: $cWhite;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    &:hover{
+      background-color: $cGreen;
+      color: $cWhite;
+    }
+  }
+}
+
+// 共通部分
+.section_title {
+  position: relative;
+  padding: 80px 0 80px;
+  text-align: center;
+  font-size: 32px;
+  &::after{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-width: 10px 6px 0 6px;
+    border-style: solid;
+    border-color: $cGreen rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+    content: '';
+    transform: translateX(-50%);
+  }
+}
+.section_subtitle{
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.under {
+  background: linear-gradient(transparent 70%, $cGreen_light 70%);
+}
+
+.green {
+  color: $cGreen;
+}
+
+// フッター
+footer{
+  padding: 55px 0 35px;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 57px;
+  }
+  .link{
+    text-align: center;
+    line-height: 2.5;
+  }
+  .left{
+    padding-left: 4%;
+  }
+  .right{
+    position: relative;
+    padding-right: 4%;
+    text-align: left;
+    &::before{
+      position: absolute;
+      top: 5%;
+      left: -20px;
+      width: 3px;
+      height: 90%;
+      background: $cborder;
+      content: "";
+    }
+  }
+  a{
+    font-size: 20px;
+  }
+  p{
+    text-align: center;
+    font-size: 12px;
+    line-height: 1;
+  }
+  .mail{
+    padding-bottom: 18px;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,48 @@
+.voice {
+  padding-bottom: 120px;
+  background-color: $cbg_gray;
+  
+  &_list{
+    display: flex;
+    justify-content: center;
+
+    gap: 20px;
+  }
+  &_item{
+    position: relative;
+    padding: 32px 24px;
+    width: 252px;
+    height: 178px;
+    background-color: $cWhite;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+    transition: all .4s;
+    &:hover{
+      box-shadow: 4px 12px 8px rgba(0, 0, 0, .5);
+      transform: translateY(-8px);
+    }
+    a{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  h4{
+    font-size: 18px;
+  }
+  p {
+    position: absolute;
+    bottom: 30px;
+    padding-top: 24px;
+  }
+  
+  .link_img{
+    position: absolute;
+    right: -1px;
+    bottom: 9px;
+    width: 94px;
+    height: 90px;
+    img{
+      height: 100px;
+    }
+  }
+}

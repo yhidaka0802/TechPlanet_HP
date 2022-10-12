@@ -1,0 +1,48 @@
+.roadmap{
+  padding-bottom: 80px;
+  background-color: $cbg_blue;
+  text-align: center;
+
+  .section_title{
+    line-height: 1.4;
+  }
+
+  &_content {
+    display: flex;
+    justify-content: center;
+
+    gap: 12px;
+  }
+  &_item{
+    margin-bottom: 170px;
+    padding: 24px 24px;
+    max-width: 442px;
+    height: 122px;
+    border: 1px solid $cborder;
+    background-color: $cWhite;
+    text-align: left;
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    h4{
+      font-size: 24px;
+      span{
+        font-size: 16px;
+      }
+    }
+    p{
+      margin-top: 8px;
+    }
+  }
+  &_number{
+    padding-top: 58px;
+    width: 64px;
+  }
+  &_right{
+    margin-top: 170px;
+  }
+  &_last{
+    font-size: 32px;
+  }
+}

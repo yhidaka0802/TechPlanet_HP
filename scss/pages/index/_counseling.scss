@@ -1,0 +1,28 @@
+.counseling {
+  padding: 80px 0;
+  background-color: $cGreen_strong;
+  color: $cWhite;
+  text-align: center;
+
+  h3 {
+    font-size: 32px;
+    line-height: 1;
+  }
+  p {
+    margin: 40px 0;
+  }
+
+  &_btn {
+    padding: 18px 83px;
+    border-radius: 18px;
+    background-color: $cGreen;
+    color: $cWhite;
+    font-size: 24px;
+    transition: all .4s;
+
+    &:hover{
+      background-color: $cWhite;
+      color: $cGreen;
+    }
+  }
+}

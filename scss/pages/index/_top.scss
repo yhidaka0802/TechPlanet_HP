@@ -1,0 +1,25 @@
+.top{
+  width: calc(100% - 220px);
+  height: calc(100vh - 100px);
+
+  div{
+    position: relative;
+    height: 100%;
+    h2 {
+      font-size: 36px;
+    }
+    .upper {
+      position: absolute;
+      top: 120px;
+      left: 85px;
+    }
+    .bottom{
+      position: absolute;
+      right: 85px;
+      bottom: 100px;
+    }
+    img{
+      height: 100%;
+    }
+  }
+}

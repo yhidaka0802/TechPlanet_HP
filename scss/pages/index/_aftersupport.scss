@@ -1,0 +1,44 @@
+.aftersupport{
+  padding-bottom: 100px;
+  &_item{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+
+    gap: 32px;
+    
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &_text{
+    width: 45%;
+    .number{
+      display: inline-block;
+      float: left;
+      margin-right: 24px;
+      border-bottom: 1px solid $cGreen;
+      color: $cGreen;
+      content: attr(data-number);
+      font-weight: bold;
+      font-size: 32px;
+      font-size: 32px;
+    }
+    h4 {
+      position: relative;
+      margin-left: 48px;
+      font-size: 28px;
+    }
+    p{
+      margin-top: 8px;
+      margin-left: 40px;
+    }
+  }
+  &_img{
+    width: 35%;
+    height: 242px;
+    img{
+      height: 100%;
+    }
+  }
+}

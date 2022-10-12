@@ -1,0 +1,43 @@
+.reason{
+  padding-bottom: 80px;
+  background-color: $cbg_gray;
+
+  h4 {
+    position: relative;
+    margin-bottom: 12px;
+    font-size: 32px;
+    &::before{
+      display: inline-block;
+      margin-right: 24px;
+      border-bottom: 1px solid $cGreen;
+      color: $cGreen;
+      content: attr(data-number);
+      font-size: 32px;
+    }
+  }
+  p {
+    margin-left: 40px;
+    width: 500px;
+  }
+  
+  &_item{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+
+    gap: 28px;
+    &:nth-child(2n){
+      flex-direction: row-reverse;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &_img{
+    width: 388px;
+    height: 242px;
+    img{
+      height: 100%;
+    }
+  }
+}
