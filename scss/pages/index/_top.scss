@@ -1,22 +1,49 @@
 .top{
   width: calc(100% - 220px);
   height: calc(100vh - 100px);
+  @include mq(pc){
+    height: 564px;
+  }
+  @include mq(tb){
+    width: 100%;
+  }
+  @include mq(sp){
+    height: 353px;
+  }
 
   div{
     position: relative;
     height: 100%;
     h2 {
       font-size: 36px;
+      @include mq(sp){
+        font-size: 24px;
+      }
     }
     .upper {
       position: absolute;
       top: 120px;
       left: 85px;
+      @include mq(tb){
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+      }
+      @include mq(sp){
+        top: 70px;
+      }
     }
     .bottom{
       position: absolute;
       right: 85px;
       bottom: 100px;
+      @include mq(tb){
+        right: 50%;
+        transform: translateX(50%);
+      }
+      @include mq(sp){
+        bottom: 70px;
+      }
     }
     img{
       height: 100%;

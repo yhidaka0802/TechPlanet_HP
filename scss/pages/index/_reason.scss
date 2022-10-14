@@ -2,10 +2,22 @@
   padding-bottom: 80px;
   background-color: $cbg_gray;
 
+  .section_title {
+    @include mq(sp){
+      font-size: 20px;
+    }
+  }
+
   h4 {
     position: relative;
     margin-bottom: 12px;
     font-size: 32px;
+    @include mq(tb){
+      font-size: 28px;
+    }
+    @include mq(sp){
+      font-size: 24px;
+    }
     &::before{
       display: inline-block;
       margin-right: 24px;
@@ -13,11 +25,24 @@
       color: $cGreen;
       content: attr(data-number);
       font-size: 32px;
+      @include mq(sp){
+        font-size: 28px;
+        margin-left: 4%;
+      }
     }
   }
   p {
     margin-left: 40px;
     width: 500px;
+
+    @include mq(tb){
+      margin-left: 0;
+      width: 400px;
+    }
+    @include mq(sp){
+      width: auto;
+      padding: 0 4%;
+    }
   }
   
   &_item{
@@ -26,18 +51,42 @@
     margin-bottom: 100px;
 
     gap: 28px;
+    @include mq(tb){
+      align-items: center;
+      flex-direction: column-reverse;
+      margin-bottom: 70px;
+
+      gap: 18px;
+    }
+    @include mq(sp){
+      gap: 8px;
+    }
     &:nth-child(2n){
       flex-direction: row-reverse;
+
+      @include mq(tb){
+        flex-direction: column-reverse;
+      }
     }
     &:last-child{
       margin-bottom: 0;
     }
   }
+
   &_img{
     width: 388px;
     height: 242px;
+    @include mq(sp){
+      width: auto;
+    }
     img{
       height: 100%;
+    }
+  }
+
+  &_text{
+    @include mq(tb){
+      max-width: 400px;
     }
   }
 }

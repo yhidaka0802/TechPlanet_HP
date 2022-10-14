@@ -6,23 +6,48 @@
   h3{
     font-size: 32px;
     line-height: 1.2;
+    @include mq(sp){
+      font-size: 20px;
+    }
   }
   &_img {
     margin: 24px auto;
     width: 168px;
     height: 73px;
+    @include mq(sp){
+        width: 143px;
+        height: 69px;
+        margin: 18px auto;
+    }
   }
   h4{
     font-weight: normal;
     font-size: 24px;
     line-height: 1.2;
+    @include mq(sp){
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: left;
+      .green{
+        font-size: 18px;
+      }
+      br{
+        display: none;
+      }
+    }
   }
   .green{
     font-weight: bold;
     font-size: 28px;
+    @include mq(sp){
+      font-size: 20px;
+    }
   }
   .red {
     color: $cRed;
     font-size: 40px;
+    @include mq(sp){
+      font-size: 28px;
+    }
   }
 }

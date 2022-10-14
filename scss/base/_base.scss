@@ -40,4 +40,14 @@ img {
   margin: 0 auto;
   padding: 0 2%;
   max-width: 1100px;
+  @include mq(pc){
+    max-width: 924px;
+  }
+  @include mq(tb){
+    max-width: 706px;
+  }
+  @include mq(sp){
+    max-width: 442px;
+    padding: 0 4%;
+  }
 }

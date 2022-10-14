@@ -7,9 +7,15 @@
   h3 {
     font-size: 32px;
     line-height: 1;
+    @include mq(sp){
+      font-size: 24px;
+    }
   }
   p {
     margin: 40px 0;
+    @include mq(sp){
+      margin: 24px 0 32px;
+    }
   }
 
   &_btn {
@@ -19,6 +25,13 @@
     color: $cWhite;
     font-size: 24px;
     transition: all .4s;
+    @include mq(tb){
+      padding: 22px 32px;
+      font-size: 20px;
+    }
+    @include mq(sp){
+      padding: 22px;
+    }
 
     &:hover{
       background-color: $cWhite;

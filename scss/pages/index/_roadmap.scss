@@ -6,13 +6,21 @@
   .section_title{
     line-height: 1.4;
   }
+  .section_subtitle{
+    @include mq(sp){
+      font-size: 14px;
+    }
+  }
 
   &_content {
+    position: relative;
     display: flex;
     justify-content: center;
 
-    gap: 12px;
+    gap: 85px;
   }
+
+
   &_item{
     margin-bottom: 170px;
     padding: 24px 24px;
@@ -21,28 +29,94 @@
     border: 1px solid $cborder;
     background-color: $cWhite;
     text-align: left;
+
+    @include mq(pc){
+      max-width: 370px;
+    }
+    @include mq(tb){
+      margin-bottom: 192px;
+      padding: 16px 20px;
+      width: 310px;
+      height: 116px;
+    }
+    @include mq(sp){
+      max-width: 280px;
+    }
+
     &:last-child{
       margin-bottom: 0;
     }
-
     h4{
       font-size: 24px;
+
+      @include mq(tb){
+        font-size: 20px;
+      }
+      @include mq(sp){
+        font-size: 18px;
+      }
       span{
         font-size: 16px;
+
+        @include mq(tb){
+          font-size: 14px;
+        }
       }
     }
     p{
       margin-top: 8px;
+
+      @include mq(tb){
+        font-size: 14px;
+      }
     }
   }
+  
+
   &_number{
+    position: absolute;
+    top: 0;
+    left: 50%;
     padding-top: 58px;
     width: 64px;
+    transform: translateX(-50%);
+    .tb{
+      display: none;
+    }
+
+    @include mq(tb){
+      top: -10px;
+      left: 50%;
+      z-index: 1;
+      width: 119px;
+      .normal{
+        display: none;
+      }
+      .tb{
+        display: inline-block;
+      }
+    }
+  }
+
+
+  &_left{
+    @include mq(tb){
+      position: absolute;
+      left: 50%;
+      z-index: 2;
+      transform: translateX(-50%);
+    }
   }
   &_right{
     margin-top: 170px;
+
+    @include mq(tb){
+      position: relative;
+      z-index: 2;
+    }
   }
   &_last{
+    margin-top: 60px;
     font-size: 32px;
   }
 }

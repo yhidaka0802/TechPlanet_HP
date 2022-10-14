@@ -7,11 +7,11 @@
     <title>プログラミングスクール「TECH PLANET」</title>
     <meta name="description" content="稼げるフリーランスを目指すなら「TECH PLANET」">
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
   </head>
   <body>
     <header>
@@ -22,11 +22,10 @@
           </div>
           <h1>TECH PLANET</h1>
         </a>
-        <div class="header_counseling">
-          <a href="#">無料カウンセリング<br>はコチラから</a>
-        </div>
-        <nav>
+        <div class="openbtn"><span></span><span></span><span></span></div>
+        <nav id="g-nav">
           <ul>
+            <li><a href="#" class="nav_counseling">無料カウンセリング<br>はコチラから</a></li>
             <li><a href="#reason">選ばれる理由とは</a></li>
             <li><a href="#curriculum">カリキュラム</a></li>
             <li><a href="#graduate">卒業生の声</a></li>
@@ -62,7 +61,7 @@
         <div class="white_content">
           <h3>他と<span class="green">同じ</span>ではライバルを<span class="green">凌駕</span>する<br><span class="green">卓越した</span>存在には<span class="red">なれません！</span></h3>
           <div class="white_img"><img src="/img/allow.png" alt="だから今こそ"></div>
-          <h4>あなたに<span class="green">合わせて</span>作成された<span class="green">専用の</span>カリキュラムを使用し<br><span class="green">現役</span>エンジニアの<span class="green">専属</span>講師による<span class="green">マンツーマン</span>の指導のもと<br><span class="green">効率的な</span>学習をしましょう。</h4>
+          <h4>あなたに<span class="green">合わせて</span>作成された<span class="green">専用の</span>カリキュラムを使用し<br><span class="green">現役</span>エンジニア<span class="green">専属</span>講師による<span class="green">マンツーマン</span>の指導のもと<br><span class="green">効率的な</span>学習をしましょう。</h4>
         </div>
       </div>
     </section>
@@ -104,7 +103,7 @@
           </li>
           <li class="reason_item">
             <div class="reason_text">
-              <h4 data-number="03">スキルと強みが身につく教材</h4>
+              <h4 data-number="03">スキルが身につく教材</h4>
               <p>カリキュラム内で合計30ページ程度のLP・HPをコーディングしていただきます。膨大な量のアウトプットの過程で学んだスキルの定着を図ります。また生徒様一人一人の勉強時間や効率、学びたい領域に合わせたオーダーメイドカリキュラムを作成し、あなたに合った学習を提案します。ベースとなるスキル（WEB制作/デザイン/マーケティング/案件営業）に加えて、＋αで好きなことを勉強していただけます。</p>
             </div>
             <div class="reason_img"><img src="/img/damy_img.png" alt=""></div>
@@ -122,7 +121,7 @@
     <section class="curriculum" id="curriculum">
       <div class="wrapper">
         <h3 class="section_title">カリキュラム<br><span class="section_subtitle">短期間で<span class="green">フリーランス</span>を目指すために</span></h3>
-        <h4 class="basic" data-en="Basics">ベーシックカリキュラム</h4>
+        <h4 class="basic" data-en="Basic">ベーシックカリキュラム</h4>
         <ul>
           <li class="curriculum_item">
             <h5>HTML</h5>
@@ -206,39 +205,42 @@
           目標達成のための<span class="green">ロードマップ</span><br>
           <span class="section_subtitle">12週間コース、11月上旬入学の１例をお示しします。</span>
         </h3>
+        <div class="roadmap_content">
+          <ul class="roadmap_left">
+            <li class="roadmap_item">
+              <h4>入学テスト<span>（11月上旬）</span></h4>
+              <p>12個の入学条件を満たしたポテンシャルの高い10名の生徒様を毎月お迎えしております。</p>
+            </li>
+            <li class="roadmap_item">
+              <h4>ベーシックターム<span>（〜1月下旬）</span></h4>
+              <p>ベーシックカリキュラムに取り組んでいただきます。</p>
+            </li>
+            <li class="roadmap_item">
+              <h4>卒業案件<span>（2月中旬）</span></h4>
+              <p>卒業テストで80点以上の方を対象に、弊社が受注した5万円以上の案件をお任せします。</p>
+            </li>
+          </ul>
+          <div class="roadmap_number">
+            <img class="normal" src="/img/roadmap_number.png" alt="ロードマップの番号です">
+            <img class="tb" src="/img/roadmap_sp.png" alt="ロードマップの番号です">
+          </div>
+          <ul class="roadmap_right">
+            <li class="roadmap_item">
+              <h4>受講前課題<span>（〜11月中旬）</span></h4>
+              <p>学習を始める上で最低限必要な知識を受講前につけていただくことで、期間中の学習を効率化します。</p>
+            </li>
+            <li class="roadmap_item">
+              <h4>オーダーメイドターム<span>（〜2月上旬）</span></h4>
+              <p>生徒様が興味を持たれているベーシックカリキュラム以外の言語や学習領域を１つ追加で学習していただきます。</p>
+            </li>
+            <li class="roadmap_item">
+              <h4>アフターサポート<span>（無期限）</span></h4>
+              <p>卒業後は担当者が無期限で案件獲得のサポートや就職・転職活動のサポートをさせていただきます。</p>
+            </li>
+          </ul>
+        </div>
+        <h4 class="roadmap_last"><span class="green">稼げる</span>フリーランスへ</h4>
       </div>
-      <div class="roadmap_content">
-        <ul class="roadmap_left">
-          <li class="roadmap_item">
-            <h4>入学テスト<span>（11月上旬）</span></h4>
-            <p>12個の入学条件を満たしたポテンシャルの高い10名の生徒様を毎月お迎えしております。</p>
-          </li>
-          <li class="roadmap_item">
-            <h4>ベーシックターム<span>（〜1月下旬）</span></h4>
-            <p>ベーシックカリキュラムに取り組んでいただきます。</p>
-          </li>
-          <li class="roadmap_item">
-            <h4>卒業案件<span>（2月中旬）</span></h4>
-            <p>卒業テストで80点以上の方を対象に、弊社が受注した5万円以上の案件をお任せします。</p>
-          </li>
-        </ul>
-        <div class="roadmap_number"><img src="/img/roadmap_number.png" alt="ロードマップの番号です"></div>
-        <ul class="roadmap_right">
-          <li class="roadmap_item">
-            <h4>受講前課題<span>（〜11月中旬）</span></h4>
-            <p>学習を始める上で最低限必要な知識を受講前につけていただくことで、期間中の学習を効率化します。</p>
-          </li>
-          <li class="roadmap_item">
-            <h4>オーダーメイドターム<span>（〜2月上旬）</span></h4>
-            <p>生徒様が興味を持たれているベーシックカリキュラム以外の言語や学習領域を１つ追加で学習していただきます。</p>
-          </li>
-          <li class="roadmap_item">
-            <h4>アフターサポート<span>（無期限）</span></h4>
-            <p>卒業後は担当者が無期限で案件獲得のサポートや就職・転職活動のサポートをさせていただきます。</p>
-          </li>
-        </ul>
-      </div>
-      <h4 class="roadmap_last"><span class="green">稼げる</span>フリーランスへ</h4>
     </section>
     <section class="counseling">
       <div class="wrapper">
@@ -287,7 +289,7 @@
     <section class="graduate" id="graduate">
       <div class="wrapper">
         <h3 class="section_title">卒業生の声</h3>
-        <ul class="graduate_list">
+        <ul class="graduate_list slider">
           <li class="graduate_item">
             <a href="#">
               <div class="graduate_img">
@@ -308,6 +310,30 @@
               <div class="graduate_text">
                 <h4>自分のやりたいことを全力で応援してもらいました。</h4>
                 <p>長岡さん／高校１年生<br>16週間コース</p>
+              </div>
+              <div class="link_img"><img src="/img/link.png" alt="クリック"></div>
+            </a>
+          </li>
+          <li class="graduate_item">
+            <a href="#">
+              <div class="graduate_img">
+                <img src="/img/damy_img.png" alt="卒業生様の写真">
+              </div>
+              <div class="graduate_text">
+                <h4>世界で自分にしか作れないものを作るために。</h4>
+                <p>西條さん／自営業<br>12週間コース</p>
+              </div>
+              <div class="link_img"><img src="/img/link.png" alt="クリック"></div>
+            </a>
+          </li>
+          <li class="graduate_item">
+            <a href="#">
+              <div class="graduate_img">
+                <img src="/img/damy_img.png" alt="卒業生様の写真">
+              </div>
+              <div class="graduate_text">
+                <h4>世界で自分にしか作れないものを作るために。</h4>
+                <p>西條さん／自営業<br>12週間コース</p>
               </div>
               <div class="link_img"><img src="/img/link.png" alt="クリック"></div>
             </a>
@@ -352,7 +378,7 @@
               <td class="font_m">〜25時間／週</td>
             </tr>
             <tr>
-              <th class="right">受講料金（税込）<br>（面談<span class="under">週１回</span>）</th>
+              <th class="right">受講料金<span class="price">（税込）</span><br>（面談<span class="under">週１回</span>）</th>
               <td class="font_l">¥298,000</td>
               <td class="font_l">¥398,000</td>
               <td class="font_l">¥498,000</td>
@@ -364,6 +390,70 @@
               <td class="font_l">¥548,000</td>
             </tr>
           </table>
+          <div class="course_tb">
+            <ul class="tab">
+              <li><a href="#8week">8週間</a></li>
+              <li><a href="#12week">12週間</a></li>
+              <li><a href="#16week">16週間</a></li>
+            </ul>
+            <div id="8week" class="area">
+              <ul class="area_list">
+                <li class="area_item title">
+                  8週間プラン
+                </li>
+                <li class="area_item">
+                  こんな方におすすめ<br><span class="bold">短期間で基礎を身に着け、いち早くフリーランスを目指す方</span>
+                </li>
+                <li class="area_item">
+                  学習時間の目安　35時間~／週
+                </li>
+                <li class="area_item price">
+                  <span class="bold">受講料金（税込）</span><br><span class="under">面談週1回</span><br><span class="bold_price">¥298,000</span>
+                </li>
+                <li class="area_item price">
+                  <span class="bold">受講料金（税込）</span><br><span class="under">面談週2回</span><br><span class="bold_price">¥348,000</span>
+                </li>
+              </ul>
+            </div>
+            <div id="12week" class="area">
+              <ul class="area_list">
+                <li class="area_item title">
+                12週間プラン
+                </li>
+                <li class="area_item">
+                  こんな方におすすめ<br><span class="bold">メンターからの丁寧なフィードバックでスキルを身に着けたい方</span>
+                </li>
+                <li class="area_item">
+                  学習時間の目安　25~35時間／週
+                </li>
+                <li class="area_item price">
+                  <span class="bold">受講料金（税込）</span><br><span class="under">面談週1回</span><br><span class="bold_price">¥398,000</span>
+                </li>
+                <li class="area_item price">
+                  <span class="bold">受講料金（税込）</span><br><span class="under">面談週2回</span><br><span class="bold_price">¥448,000</span>
+                </li>
+              </ul>
+            </div>
+            <div id="16week" class="area">
+              <ul class="area_list">
+                <li class="area_item title">
+                  16週間プラン
+                </li>
+                <li class="area_item">
+                  こんな方におすすめ<br><span class="bold">０からのプログラミング学習に不安を感じる方</span>
+                </li>
+                <li class="area_item">
+                  学習時間の目安　~25時間／週
+                </li>
+                <li class="area_item price">
+                  <span class="bold">受講料金（税込）</span><br><span class="under">面談週1回</span><br><span class="bold_price">¥498,000</span>
+                </li>
+                <li class="area_item price">
+                  <span class="bold">受講料金（税込）</span><br><span class="under">面談週2回</span><br><span class="bold_price">¥548,000</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="course_english">
           <h4><span class="green">English</span>英語面談コース</h4>
@@ -382,7 +472,7 @@
               <td class="font_m">〜25時間／週</td>
             </tr>
             <tr>
-              <th class="right">受講料金（税込）<br>（面談<span class="under">週１回</span>）</th>
+              <th class="right">受講料金<span class="price">（税込）</span><br>（面談<span class="under">週１回</span>）</th>
               <td class="font_l">¥348,000</td>
               <td class="font_l">¥448,000</td>
               <td class="font_l">¥548,000</td>
@@ -394,13 +484,77 @@
               <td class="font_l">¥598,000</td>
             </tr>
           </table>
+          <div class="course_tb">
+            <ul class="tab">
+              <li><a href="#e_8week">8週間</a></li>
+              <li><a href="#e_12week">12週間</a></li>
+              <li><a href="#e_16week">16週間</a></li>
+            </ul>
+            <div id="e_8week" class="area">
+              <ul class="area_list">
+                <li class="area_item title">
+                  8週間プラン
+                </li>
+                <li class="area_item">
+                  こんな方におすすめ<br><span class="bold">短期間で基礎を身に着け、いち早くフリーランスを目指す方</span>
+                </li>
+                <li class="area_item">
+                  学習時間の目安　35時間~／週
+                </li>
+                <li class="area_item price">
+                  <span class="bold">受講料金（税込）</span><br><span class="under">面談週1回</span><br><span class="bold_price">¥298,000</span>
+                </li>
+                <li class="area_item price">
+                  <span class="bold">受講料金（税込）</span><br><span class="under">面談週2回</span><br><span class="bold_price">¥348,000</span>
+                </li>
+              </ul>
+            </div>
+            <div id="e_12week" class="area">
+              <ul class="area_list">
+                <li class="area_item title">
+                12週間プラン
+                </li>
+                <li class="area_item">
+                  こんな方におすすめ<br><span class="bold">メンターからの丁寧なフィードバックでスキルを身に着けたい方</span>
+                </li>
+                <li class="area_item">
+                  学習時間の目安　25~35時間／週
+                </li>
+                <li class="area_item price">
+                  <span class="bold">受講料金（税込）</span><br><span class="under">面談週1回</span><br><span class="bold_price">¥398,000</span>
+                </li>
+                <li class="area_item price">
+                  <span class="bold">受講料金（税込）</span><br><span class="under">面談週2回</span><br><span class="bold_price">¥448,000</span>
+                </li>
+              </ul>
+            </div>
+            <div id="e_16week" class="area">
+              <ul class="area_list">
+                <li class="area_item title">
+                  16週間プラン
+                </li>
+                <li class="area_item">
+                  こんな方におすすめ<br><span class="bold">０からのプログラミング学習に不安を感じる方</span>
+                </li>
+                <li class="area_item">
+                  学習時間の目安　~25時間／週
+                </li>
+                <li class="area_item price">
+                  <span class="bold">受講料金（税込）</span><br><span class="under">面談週1回</span><br><span class="bold_price">¥498,000</span>
+                </li>
+                <li class="area_item price">
+                  <span class="bold">受講料金（税込）</span><br><span class="under">面談週2回</span><br><span class="bold_price">¥548,000</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <section class="voice" id="voice">
       <div class="wrapper">
         <h3 class="section_title">無料カウンセリングを受けた方の声</h3>
-        <ul class="voice_list">
+        <ul class="voice_list slider">
           <li class="voice_item">
             <a href="#">
               <h4>学習の方向性や方法をアドバイスしてもらい、モチベーションが上がりました。</h4>
@@ -412,6 +566,20 @@
             <a href="#">
               <h4>現役エンジニアと相談することで自分の夢が具体的になりました。</h4>
               <p>〇〇さん／大学２年生</p>
+              <div class="link_img"><img src="/img/link.png" alt="クリック"></div>
+            </a>
+          </li>
+          <li class="voice_item">
+            <a href="#">
+              <h4>未経験からでもフリーランスになれると自信が付きました。</h4>
+              <p>〇〇さん／会社員</p>
+              <div class="link_img"><img src="/img/link.png" alt="クリック"></div>
+            </a>
+          </li>
+          <li class="voice_item">
+            <a href="#">
+              <h4>未経験からでもフリーランスになれると自信が付きました。</h4>
+              <p>〇〇さん／会社員</p>
               <div class="link_img"><img src="/img/link.png" alt="クリック"></div>
             </a>
           </li>

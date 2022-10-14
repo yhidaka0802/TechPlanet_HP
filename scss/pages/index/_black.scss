@@ -2,19 +2,34 @@
   padding: 80px 0;
   background-color: $cBlack;
   color: $cWhite;
+  @include mq(sp){
+    padding: 50px 0;
+  }
   
   &_content{
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    @include mq(tb){
+      flex-direction: column;
+      align-items: center;
+      gap: 36px;
+    }
 
     &_text{
       padding-right: 16px;
+      @include mq(sp){
+        padding-right: 0;
+      }
       h3{
         width: 380px;
         font-weight: normal;
         font-size: 28px;
         line-height: 1.2;
+        @include mq(sp){
+          font-size: 24px;
+          width: auto;
+        }
       }
       p{
         display: inline-block;
@@ -23,28 +38,45 @@
         background-color: $cGreen;
         font-weight: bold;
         font-size: 18px;
+        @include mq(sp){
+          text-align: center;
+          margin: 24px 0;
+        }
       }
       h4 {
         width: 620px;
         font-weight: normal;
         font-size: 28px;
         line-height: 1.2;
+        @include mq(sp){
+          width: auto;
+          font-size: 16px;
+        }
       }
       .green{
         font-weight: bold;
         font-size: 32px;
+        @include mq(sp){
+          font-size: 28px;
+        }
       }
       .red {
         border-bottom: 1px solid $cRed;
         color: $cRed;
         font-weight: bold;
         font-size: 36px;
+        @include mq(sp){
+          font-size: 32px;
+        }
       }
     }
 
     &_img{
       width: 380px;
       height: 280px;
+      @include mq(sp){
+        width: 100%;
+      }
       img{
         height: 100%;
       }

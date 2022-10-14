@@ -47,6 +47,33 @@
       vertical-align: bottom;
       text-align: right;
     }
+    .price{
+      font-size: 18px;
+    }
+    @include mq(tb){
+      display: none;
+    }
+  }
+
+  
+  &_tb{
+    display: none;
+    @include mq(tb){
+      display: block;
+
+      .tab{
+        display: flex;
+        li{
+          a{
+            display: block;
+            background-color: $cGray;
+          }
+          &.active a{
+            background-color: $cGreen_strong;
+          }
+        }
+      }
+    }
   }
 
   &_normal{

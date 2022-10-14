@@ -6,13 +6,29 @@
     margin-bottom: 100px;
 
     gap: 32px;
-    
+    @include mq(tb){
+      align-items: center;
+      flex-direction: column-reverse;
+      margin-bottom: 70px;
+
+      gap: 18px;
+    }
+    @include mq(sp){
+      gap: 8px;
+    }
     &:last-child{
       margin-bottom: 0;
     }
   }
+
+
   &_text{
     width: 45%;
+
+    @include mq(tb){
+      max-width: 400px;
+      width: auto;
+    }
     .number{
       display: inline-block;
       float: left;
@@ -22,21 +38,49 @@
       content: attr(data-number);
       font-weight: bold;
       font-size: 32px;
-      font-size: 32px;
+
+      @include mq(sp){
+        margin-left: 4%;
+        font-size: 28px;
+      }
     }
     h4 {
       position: relative;
       margin-left: 48px;
       font-size: 28px;
+
+      @include mq(tb){
+        font-size: 24px;
+        br{
+          display: none;
+        }
+      }
     }
     p{
       margin-top: 8px;
       margin-left: 40px;
+
+      @include mq(tb){
+        margin-left: 0;
+      }
+      @include mq(sp){
+        padding: 0 4%;
+      }
     }
   }
+
+
   &_img{
     width: 35%;
     height: 242px;
+
+    @include mq(tb){
+      max-width: 388px;
+      width: auto;
+    }
+    @include mq(sp){
+      max-width: none;
+    }
     img{
       height: 100%;
     }
