@@ -1101,12 +1101,14 @@ img {
   margin-left: 48px;
   font-size: 28px;
 }
+@media screen and (max-width: 1024px) {
+  .aftersupport_text h4 br {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   .aftersupport_text h4 {
     font-size: 24px;
-  }
-  .aftersupport_text h4 br {
-    display: none;
   }
 }
 .aftersupport_text p {
@@ -1129,13 +1131,12 @@ img {
 }
 @media screen and (max-width: 768px) {
   .aftersupport_img {
-    max-width: 388px;
-    width: auto;
+    width: 388px;
   }
 }
 @media screen and (max-width: 480px) {
   .aftersupport_img {
-    max-width: none;
+    width: auto;
   }
 }
 .aftersupport_img img {
@@ -1218,11 +1219,21 @@ img {
 .course table {
   border-collapse: collapse;
 }
+@media screen and (max-width: 480px) {
+  .course table {
+    display: none;
+  }
+}
 .course table th, .course table td {
   padding: 16px 16px;
   height: 90px;
   border: solid 1px #707070;
   vertical-align: middle;
+}
+@media screen and (max-width: 768px) {
+  .course table th, .course table td {
+    padding: 8px;
+  }
 }
 .course table th {
   font-size: 24px;
@@ -1244,31 +1255,85 @@ img {
 .course table .right {
   vertical-align: bottom;
   text-align: right;
-}
-.course table .price {
-  font-size: 18px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 2;
 }
 @media screen and (max-width: 768px) {
-  .course table {
-    display: none;
+  .course table .right {
+    font-size: 18px;
   }
+}
+.course table .strong {
+  font-weight: bold;
+}
+.course table .price {
+  font-size: 14px;
 }
 .course_tb {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .course_tb {
     display: block;
+    max-width: 380px;
   }
   .course_tb .tab {
     display: flex;
+    justify-content: center;
+  }
+  .course_tb .tab li {
+    width: 33.3333333333%;
   }
   .course_tb .tab li a {
     display: block;
     background-color: #C4C4C4;
+    font-size: 20px;
   }
-  .course_tb .tab li.active a {
+  .course_tb .tab li.current a {
     background-color: #154F4F;
+    color: #fff;
+  }
+  .course_tb .area {
+    background-color: #fff;
+  }
+  .course_tb .area_item {
+    border: 1px solid #707070;
+    height: 90px;
+    font-size: 16px;
+  }
+  .course_tb .area .title {
+    font-size: 20px;
+    background-color: rgb(42, 162, 162);
+    line-height: 4.5;
+    color: #fff;
+  }
+  .course_tb .area .time {
+    line-height: 4.5;
+  }
+  .course_tb .area .size {
+    font-size: 20px;
+  }
+  .course_tb .area .bold {
+    font-weight: bold;
+    display: inline-block;
+    width: 256px;
+  }
+  .course_tb .area .price {
+    position: relative;
+  }
+  .course_tb .area .price_left {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    text-align: left;
+  }
+  .course_tb .area .price_bold {
+    font-weight: bold;
+    font-size: 24px;
+    position: absolute;
+    top: 25%;
+    right: 15%;
   }
 }
 .course_normal {
@@ -1277,11 +1342,21 @@ img {
 .course_normal h4 {
   margin-bottom: 43px;
 }
+@media screen and (max-width: 480px) {
+  .course_normal h4 {
+    margin-bottom: 24px;
+  }
+}
 .course_english table {
   width: 100%;
 }
 .course_english p {
   margin-bottom: 24px;
+}
+@media screen and (max-width: 480px) {
+  .course_english p br {
+    display: none;
+  }
 }
 
 .voice {

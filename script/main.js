@@ -33,6 +33,29 @@ $('.slider').slick({
   }]
 });
 
+// タブメニュー
+$(function(){
+  $('#contents div[id != "8week"]').hide();
+  $('#normal a').click(function(){
+    $("#contents div").hide();
+    $($(this).attr("href")).fadeIn(600);
+    $("#normal .current").removeClass("current");
+    $($(this).parent()).addClass("current");
+    return false;
+  });
+});
+
+$(function(){
+  $('#e-contents div[id != "e_8week"]').hide();
+  $('#english a').click(function(){
+    $("#e-contents div").hide();
+    $($(this).attr("href")).fadeIn(600);
+    $("#english .current").removeClass("current");
+    $($(this).parent()).addClass("current");
+    return false;
+  });
+});
+
 
 // // フェードインアニメーション
 // function fadeAnime(){
@@ -82,16 +105,16 @@ $('.slider').slick({
 // });
 
 
-// スムーススクロール
-$(function(){
-  $('a[href^="#"]').click(function(){
-    var href = $(this).attr("href");
-    var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top - 50;
-    var speed = 500;
-    $("html, body").animate({
-      scrollTop: position
-    }, speed, "swing");
-    return false;
-  });
-});
+// // スムーススクロール
+// $(function(){
+//   $('a[href^="#"]').click(function(){
+//     var href = $(this).attr("href");
+//     var target = $(href == "#" || href == "" ? 'html' : href);
+//     var position = target.offset().top - 50;
+//     var speed = 500;
+//     $("html, body").animate({
+//       scrollTop: position
+//     }, speed, "swing");
+//     return false;
+//   });
+// });
