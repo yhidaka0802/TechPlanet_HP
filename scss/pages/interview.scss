@@ -1,0 +1,246 @@
+@charset "UTF-8";
+
+@import "../base/reset";
+@import "../base/base";
+@import "../config";
+@import "../mixin";
+@import "../slick";
+@import "../common";
+@import "../pages/index/graduate";
+@import "../pages/index/voice";
+@import "../pages/index/counseling";
+
+
+header{
+  background-color: $cWhite;
+}
+
+#g-nav{
+  position: fixed;
+  top: 0;
+  right: -120%;
+  z-index: 999;
+  width: 220px;
+  height: 664px;
+  background-color: $cWhite;
+  transition: all .4s;
+
+  @include mq(sp){
+    width: 150px;
+    height: 416px;
+  }
+
+  &.panelactive{
+    right: 0;
+  }
+}
+
+.openbtn {
+  background-color: $cWhite;
+  position: absolute;
+  right: 16px;
+  z-index: 9999;
+  display: inline-block;
+  width: 68px;
+  height: 68px;
+  border: 1px solid $cborder;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: all .4s;
+
+  @include mq(sp){
+  width: 50px;
+  height: 50px;
+  background-color: $cWhite;
+  }
+
+  span {
+    position: absolute;
+    left: 19px;
+    display: inline-block;
+    width: 45%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: $cGreen;
+    transition: all .4s;
+
+    @include mq(sp){
+      left: 14px;
+    }
+
+    &:nth-of-type(1){
+      top: 23px;
+
+      @include mq(sp){
+        top: 15px;
+      }
+    }
+    &:nth-of-type(2){
+      top: 35px;
+
+      @include mq(sp){
+        top: 23px;
+      }
+    }
+    &:nth-of-type(3){
+      top: 47px;
+
+      @include mq(sp){
+        top: 31px;
+      }
+    }
+  }
+
+  &.active {
+    position: fixed;
+    margin-right: 234px;
+
+    @include mq(sp){
+      top: 80px;
+      margin-right: 180px;
+    }
+    span{
+      &:nth-of-type(1){
+        top: 26px;
+        left: 17px;
+        width: 50%;
+        transform: translateY(6px) rotate(-45deg);
+
+        @include mq(sp){
+          top: 18px;
+          left: 18px;
+          width: 30%;
+        }
+      }
+      &:nth-of-type(2){
+        opacity: 0;
+      }
+      &:nth-of-type(3){
+        top: 38px;
+        left: 17px;
+        width: 50%;
+        transform: translateY(-6px) rotate(45deg);
+
+        @include mq(sp){
+          top: 30px;
+          left: 18px;
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+
+
+body{
+  background-color: $cbg_gray;
+  font-size: 18px;
+  @include mq(sp){
+    font-size: 16px;
+  }
+}
+
+main{
+  .interview_wrapper{
+    margin-top: 45px;
+    padding: 0 4%;
+    width: 92%;
+  }
+}
+
+.top{
+  margin: 0 auto;
+  padding: 0 4% 62px;
+  max-width: 1000px;
+  background-color: $cWhite;
+
+  &_title{
+    margin: 0 auto;
+    max-width: 926px;
+    &_tag{
+      display: inline-block;
+      margin-top: 32px;
+      padding: 4px 18px;
+      border-radius: 8px;
+      background-color: $cGreen;
+      color: $cWhite;
+    }
+
+    h2{
+      margin-top: 12px;
+      font-size: 32px;
+      line-height: 1.6;
+      @include mq(sp){
+        font-size: 24px;
+      }
+    }
+  }
+
+  &_img{
+    margin: 18px auto 32px;
+    max-width: 697px;
+    height: 465px;
+    @include mq(sp){
+      height: auto;
+      margin-bottom: 18px;
+    }
+    img{
+      height: 100%;
+    }
+  }
+
+  &_comment{
+    margin: 0 auto;
+    padding: 17px 21px;
+    max-width: 655px;
+    border: 3px solid $cGreen_light;
+    border-radius: 8px;
+  }
+}
+
+.interview{
+  margin: 0 auto;
+  padding: 0 4% 80px;
+  max-width: 1000px;
+  background-color: $cWhite;
+
+  h3{
+    padding: 8px 0 8px 20px;
+    background-color: $cGreen;
+    color: $cWhite;
+    font-size: 28px;
+    @include mq(sp){
+      font-size: 18px;
+      padding: 16px;
+    }
+  }
+  
+  &_content{
+    li{
+      margin-top: 28px;
+    }
+    span{
+      margin-right: 20px;
+      font-weight: bold;
+    }
+    .green{
+      color: #1D7070;
+    }
+    .red{
+      color: #a80000;
+    }
+  }
+
+  &_img{
+    margin: 45px auto 100px;
+    max-width: 697px;
+    height: 465px;
+    @include mq(sp){
+      height: auto;
+      margin: 20px auto 60px;
+    }
+    img{
+      height: 100%;
+    }
+  }
+}
